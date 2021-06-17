@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn-submit{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(44, 148, 148);
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
