@@ -22,7 +22,6 @@ export default {
             const qry = await fetch('https://api.thecatapi.com/v1/images/search?&order=rand&limit=1&has_breeds=true&size=small');
             const dataJson = await qry.json();
 
-
             console.log(dataJson[0].breeds[0].name);
         }
     }
