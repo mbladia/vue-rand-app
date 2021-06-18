@@ -16,7 +16,7 @@ export default {
     data() {
         return{
             title: "Random Food Jokes",
-            userMessage: "Enjoy!",
+            userMessage: "Enjoy!!!!!",
             text: "Click button to show random food jokes",
             items: ['🤣 Ok','😂','🤣🤣 Hahaha','😆 LOL','😝 Ohhh','🙄🙄',
             '🤣','🤪']
