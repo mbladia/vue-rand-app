@@ -8,7 +8,10 @@
 </template>
 
 <script>
-
+const aws = require('aws-sdk');
+let api_key = new aws.S3({
+  secretAccessKey: process.env.VUE_APP_RAND_FOOD_JOKE_API
+});
 export default {
     name: "RandFoodJokesAPI",
     data() {
@@ -23,7 +26,7 @@ export default {
     methods: {
         async getFoodJoke(){
             // console.log(process.env.VUE_APP_RAND_FOOD_JOKE_API);
-            const api_key = process.env.VUE_APP_RAND_FOOD_JOKE_API;
+            // const api_key = process.env.VUE_APP_RAND_FOOD_JOKE_API;
             const api_url = `https://api.spoonacular.com/food/jokes/random?apiKey=${api_key}`
             const qry = await fetch(api_url)
             const res = await qry.json()
