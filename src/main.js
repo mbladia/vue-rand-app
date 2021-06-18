@@ -13,7 +13,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
-console.log('env', JSON.stringify(process.env))
+// console.log('env', JSON.stringify(process.env))
 new Vue({
   render: h => h(App),
 }).$mount('#app')

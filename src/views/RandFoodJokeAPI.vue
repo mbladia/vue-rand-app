@@ -9,7 +9,7 @@
 
 <script>
 // const aws = require('aws-sdk');
-let api_key =  process.env.VUE_APP_RAND_FOOD_JOKE_API
+// let api_key =  process.env.VUE_APP_RAND_FOOD_JOKE_API
 
 export default {
     name: "RandFoodJokesAPI",
@@ -25,8 +25,8 @@ export default {
     methods: {
         async getFoodJoke(){
             // console.log(process.env.VUE_APP_RAND_FOOD_JOKE_API);
-            // const api_key = process.env.VUE_APP_RAND_FOOD_JOKE_API;
-            console.log(api_key);
+            const api_key = process.env.VUE_APP_RAND_FOOD_JOKE_API;
+            // console.log(api_key);
             const api_url = `https://api.spoonacular.com/food/jokes/random?apiKey=${api_key}`
             const qry = await fetch(api_url)
             const res = await qry.json()
