@@ -2,6 +2,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import { BootstrapVue, IconsPlugin, BootstrapVueIcons } from 'bootstrap-vue'
+import VueMeta from 'vue-meta'
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -12,6 +13,7 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 Vue.use(BootstrapVueIcons)
+Vue.use(VueMeta)
 
 Vue.config.productionTip = false
 // console.log('env', JSON.stringify(process.env))
