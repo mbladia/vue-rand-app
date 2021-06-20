@@ -75,12 +75,13 @@ export default {
     methods:{
         async getData(){
             const api_key = process.env.VUE_APP_NEWS_API;
-            console.log(api_key);
             const selectCategory = this.selected
             let pageSize = this.pageSize
             let searched = this.searched
             // let page = this.page
-            const qry = await fetch(`https://newsapi.org/v2/top-headlines?apiKey=${api_key}&country=ph&category=${selectCategory}&pageSize=${pageSize}&q=${searched}`)
+            const qry = await fetch(`https://newsapi.org/v2/top-headlines?apiKey=${api_key}&country=ph&category=${selectCategory}&pageSize=${pageSize}&q=${searched}`).catch(error => {
+                throw(error)
+            })
             const dataToJson = await qry.json();
 
             this.totalResults = dataToJson.totalResults
@@ -88,7 +89,7 @@ export default {
             dataToJson.articles.forEach(element => {
                 this.articles.push(element)
             })
-            
+            console.log(dataToJson);
 
         },
         doMath: function (index) {
