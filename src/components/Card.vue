@@ -73,7 +73,7 @@ export default {
                     "description" : "Because everyday is a Caturday. Show a random cat breed.",
                     "imgSrc":require("../assets/rand-cat-breed.jpg"),
                     "app-link": "",
-                    "api":"The Cat API - www.thecatapi.com/"
+                    "api":"The Cat API - www.thecatapi.com"
                 },
                 {
                     "id":4,
@@ -81,6 +81,7 @@ export default {
                     "description" : "Show top and breaking headlines in philippines, articles are sorted by the earliest date published first.",
                     "imgSrc": require("../assets/news-api.jpg"),
                     "app-link": "",
+                    "api":"News API - www.newsapi.org"
 
                 },
                 // {
