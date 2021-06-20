@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="center-all-container">
         <!-- <h1 class="title">{{title}}</h1> -->
         <h1 class="user-message">{{userMessage}}</h1>
         <h4 class="mt-4">{{text}}</h4>

@@ -75,14 +75,14 @@ export default {
                     "app-link": "",
                     "api":"The Cat API - www.thecatapi.com/"
                 },
-                // {
-                //     "id":4,
-                //     "title": "Random Dog Breed",
-                //     "description" : "This is just sample dog random breed",
-                //     "imgSrc": "@/assets/dog-breed-app.jpg",
-                //     "app-link": "",
+                {
+                    "id":4,
+                    "title": "NewsAPI",
+                    "description" : "Show top and breaking headlines in philippines, articles are sorted by the earliest date published first.",
+                    "imgSrc": require("../assets/news-api.jpg"),
+                    "app-link": "",
 
-                // },
+                },
                 // {
                 //     "id":5,
                 //     "title": "Random Dog Breed",
