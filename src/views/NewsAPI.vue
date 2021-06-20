@@ -92,7 +92,7 @@ export default {
                     this.articles.push(element)
             })
             }else{
-                this.request = "Maximum request exceeded"
+                this.request = "API works in development"
             }
         },
         doMath: function (index) {
