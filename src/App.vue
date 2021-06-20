@@ -27,10 +27,10 @@ export default {
             meta: [
                 { name: 'description', content:  'Collected all my API pet projects and display them all in singe web app.'},
                 { property: 'og:title', content: "API Vue App - Another vue pet project."},
-                { property: 'og:site_name', content: 'API Vue App'},
-                {property: 'og:type', content: 'website'},    
-                {name: 'robots', content: 'index,follow'},
-                {property: 'og:image', content: "@/assets/images/logo.png" || ''}
+                { property: 'og:site_name', content: 'API Vue Appssss'},
+                { property: 'og:type', content: 'website'},    
+                { name: 'robots', content: 'index,follow'},
+                { property: 'og:image', content: "@/assets/images/logo.png" || ''}
             ]
         }
     }
