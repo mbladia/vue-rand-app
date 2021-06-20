@@ -1,13 +1,17 @@
 <template>
     <div class="center-all-container">
-
-        <div class="image-modal-main" :style="{'background-image': 'url('+ imgUrl +')'}"></div>
-        <p class="cat-name"><b>Name:</b> {{ name }}</p>
-        <p class="origin"><b>Origin:</b> {{ origin }}</p>
-        <p class="temperament"><b>Temperament:</b> {{ temperament }}</p>
-        <p class="description"><b>Description:</b> {{ description }}</p>
-        <button class="btn-submit" v-on:click="getRandCat()">Random</button>
-   
+        <b-row class="justify-content-md-center row-no-margin text-center">
+            <b-col sm="12" lg="6" class="">
+                <div class="image-modal-main" :style="{'background-image': 'url('+ imgUrl +')'}"></div>
+            </b-col>
+                <p class="cat-name"><b>Name:</b> {{ name }}</p>
+                <p class="origin"><b>Origin:</b> {{ origin }}</p>
+                <p class="temperament"><b>Temperament:</b> {{ temperament }}</p>
+                <p class="description"><b>Description:</b> {{ description }}</p>
+            <b-col>
+                <button class="btn-submit" v-on:click="getRandCat()">Random</button>
+            </b-col>
+        </b-row>
     </div>
 </template>
 
@@ -57,4 +61,5 @@ export default {
 .description.origin.temperament.cat-name{
     text-align: center;
 }
+
 </style>

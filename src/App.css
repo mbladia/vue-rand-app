@@ -23,6 +23,8 @@ body {
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
+    /* width: 100px !important; */
+
 }
 .btn-clear{
     background-color: #e9ecef !important;
@@ -35,7 +37,7 @@ body {
     background-size: cover;
     border: orange 4px solid;
     height: 400px;
-    width: 400px;
+    /* min-width: 400px; */
 }
 .center-all-container { 
     display: flex;
@@ -43,6 +45,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 705px;
+    padding: 10px;
 }
 .input-text{
     margin-left: 10px;
@@ -54,4 +57,7 @@ body {
 }
 .input:focus{
     outline: none;
+}
+.row-no-margin{
+    margin: 0 !important;
 }

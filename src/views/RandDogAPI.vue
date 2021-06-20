@@ -1,11 +1,18 @@
 <template>
     <div class="center-all-container">
         <!-- <h1 class="title">{{ appTitle }}</h1> -->
-        <div class="image-modal-main" :style="{'background-image': 'url('+ picture +')'}"></div>
-        <p class="dog-name"><b>Name:</b> {{ firstName }}</p>
-        <p class="breed-for"><b>Breed for:</b> {{ breedFor }}</p>
-        <p class="temperament"><b>Temperament:</b> {{ temperament }}</p>
-        <button class="btn-submit" v-on:click="getDog()">Random</button>
+        <b-row class="justify-content-md-center row-no-margin">
+            <b-col sm="12" lg="6" class="">
+                    <div class="image-modal-main" :style="{'background-image': 'url('+ picture +')'}"></div>
+            </b-col>
+        
+            <p class="dog-name"><b>Name:</b> {{ firstName }}</p>
+            <p class="breed-for"><b>Breed for:</b> {{ breedFor }}</p>
+            <p class="temperament"><b>Temperament:</b> {{ temperament }}</p>
+            <b-col>
+                <button class="btn-submit" v-on:click="getDog()">Random</button>
+            </b-col>
+        </b-row>
     </div>
 </template>
 
