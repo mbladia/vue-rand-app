@@ -87,7 +87,7 @@ export default {
             dataToJson.articles.forEach(element => {
                 this.articles.push(element)
             })
-            // console.log(dataToJson);
+            console.log(api_key);
 
         },
         doMath: function (index) {
