@@ -36,7 +36,7 @@ body {
     background-position: center;
     background-size: cover;
     border: orange 4px solid;
-    height: 400px;
+    height: 370px;
     /* min-width: 400px; */
 }
 .center-all-container { 
@@ -44,7 +44,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 705px;
+    /* height: 705p; */
     padding: 10px;
 }
 .input-text{
