@@ -41,6 +41,7 @@
         <div class="list-result" v-else>
             <b-row>
                 <h2 class="text-center">No Result</h2>
+                <h2>{{request}}</h2>
             </b-row>
         </div>
          <!-- <button class="btn-submit mt-4 text-center" v-on:click="loadMore()">Load More</button> -->
@@ -69,6 +70,7 @@ export default {
             "imgPlaceholder":  require("../assets/img-placeholder.jpg") ,
             searched:"",
             "totalResults": 20,
+            "request": ""
             // "page": 1
         }
     },
@@ -79,17 +81,19 @@ export default {
             let pageSize = this.pageSize
             let searched = this.searched
             // let page = this.page
-            const qry = await fetch(`https://newsapi.org/v2/top-headlines?apiKey=${api_key}&country=ph&category=${selectCategory}&pageSize=${pageSize}&q=${searched}`).catch(error => {
-                throw(error)
-            })
+            const qry = await fetch(`https://newsapi.org/v2/top-headlines?apiKey=${api_key}&country=ph&category=${selectCategory}&pageSize=${pageSize}&q=${searched}`)
             const dataToJson = await qry.json();
 
             this.totalResults = dataToJson.totalResults
 
-            dataToJson.articles.forEach(element => {
-                this.articles.push(element)
+            if(dataToJson.status == 'ok'){
+                dataToJson.articles.forEach(element => {
+                    this.articles.push(element)
             })
-            console.log(dataToJson);
+            }else{
+                this.request = "Maximum request exceeded"
+            }
+            console.log(dataToJson.status);
 
         },
         doMath: function (index) {
