@@ -92,7 +92,7 @@ export default {
                     this.articles.push(element)
             })
             }else{
-                this.request = "API works in development"
+                this.request = "API works in development only."
             }
         },
         doMath: function (index) {

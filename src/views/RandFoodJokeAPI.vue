@@ -1,5 +1,5 @@
 <template>
-    <div class="center-all-container">
+    <div class="cat-container">
         <!-- <h1 class="title">{{title}}</h1> -->
         <h1 class="user-message">{{userMessage}}</h1>
         <h4 class="mt-4">{{text}}</h4>
@@ -41,5 +41,12 @@ export default {
 }
 </script>
 <style scoped>
-
+    .cat-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 740px;
+    padding: 10px;
+}
 </style>
