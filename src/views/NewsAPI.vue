@@ -81,23 +81,10 @@ export default {
             let pageSize = this.pageSize
             let searched = this.searched
             let url = `https://newsapi.org/v2/top-headlines?apiKey=${api_key}&country=ph&category=${selectCategory}&pageSize=${pageSize}&q=${searched}`
-            // let page = this.page
-            // let req = new Request(url)
-            // fetch(req).then((resp) => resp.json()).then((data) => {
-            //     // console.log(data);
-            //     data.articles.forEach(element => {
-            //         this.articles.push(element)
-            //     });
-            // }).catch((error) => {
-            //     console.log(error + "error");
-            // })
             const qry = await fetch(url).catch(function(error) {
                 console.log(error);
             });
-            console.log(qry);
-            
             const dataToJson = await qry.json();
-
             this.totalResults = dataToJson.totalResults
 
             if(dataToJson.status == 'ok'){
@@ -107,8 +94,6 @@ export default {
             }else{
                 this.request = "Maximum request exceeded"
             }
-            console.log(dataToJson.status);
-
         },
         doMath: function (index) {
             return index+1
