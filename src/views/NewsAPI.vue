@@ -81,10 +81,16 @@ export default {
             let pageSize = this.pageSize
             let searched = this.searched
             // let page = this.page
-            const qry = await fetch(`https://newsapi.org/v2/top-headlines?apiKey=${api_key}&country=ph&category=${selectCategory}&pageSize=${pageSize}&q=${searched}`).then(function() {
-                console.log("ok");
-            }).catch(function() {
-                console.log("error");
+            const qry = await fetch(`https://newsapi.org/v2/top-headlines?apiKey=${api_key}&country=ph&category=${selectCategory}&pageSize=${pageSize}&q=${searched}`)
+            .then(function(response){
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response;
+            }).then(function(response) {
+                console.log(response);
+            }).catch(function(error) {
+                console.log(error);
             });
             const dataToJson = await qry.json();
 
