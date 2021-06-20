@@ -82,28 +82,40 @@ export default {
             let searched = this.searched
             let url = `https://newsapi.org/v2/top-headlines?apiKey=${api_key}&country=ph&category=${selectCategory}&pageSize=${pageSize}&q=${searched}`
             // let page = this.page
-            const qry = await fetch(url)
+            let req = new Request(url)
+
+            fetch(req).then((resp) => resp.json()).then((data) => {
+                // console.log(data);
+                data.articles.forEach(element => {
+                    this.articles.push(element)
+                });
+            }).catch((error) => {
+                console.log(error);
+            })
+            // const qry = await fetch(url)
             // .then(function(response){
             //     if (!response.ok) {
             //         throw Error(response.statusText);
             //     }
             //     return response;
             // }).then(function(response) {
-            //     console.log(response);
+            //     console.log(response.status);
             // }).catch(function(error) {
             //     console.log(error);
             // });
-            const dataToJson = await qry.json();
+            // console.log(qry);
+            
+            // const dataToJson = await qry.json();
 
-            this.totalResults = dataToJson.totalResults
+            // this.totalResults = dataToJson.totalResults
 
-            if(dataToJson.status == 'ok'){
-                dataToJson.articles.forEach(element => {
-                    this.articles.push(element)
-            })
-            }else{
-                this.request = "Maximum request exceeded"
-            }
+            // if(dataToJson.status == 'ok'){
+            //     dataToJson.articles.forEach(element => {
+            //         this.articles.push(element)
+            // })
+            // }else{
+            //     this.request = "Maximum request exceeded"
+            // }
             // console.log(dataToJson.status);
 
         },
