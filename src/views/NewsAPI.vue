@@ -75,6 +75,7 @@ export default {
     methods:{
         async getData(){
             const api_key = process.env.VUE_APP_NEWS_API;
+            console.log(api_key);
             const selectCategory = this.selected
             let pageSize = this.pageSize
             let searched = this.searched
@@ -87,7 +88,7 @@ export default {
             dataToJson.articles.forEach(element => {
                 this.articles.push(element)
             })
-            console.log(api_key);
+            
 
         },
         doMath: function (index) {
