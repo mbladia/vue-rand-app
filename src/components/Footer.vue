@@ -1,6 +1,6 @@
 <template>
     <div class="footer" type="dark">
-        <span>Mark Bryan Ladia || mbladia10@gmail.com</span>
+        <span>MBentoo</span>
     </div>
 </template>
 
