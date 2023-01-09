@@ -34,7 +34,7 @@ export default {
             // console.log(process.env.VUE_APP_RAND_DOG_BREED);
             const api_key = process.env.VUE_APP_RAND_DOG_BREED;
             // console.log(api_key);
-            const qry =  await fetch(`https://api.thedogapi.com/v1/images/search?key=${api_key}&size=thumb&has_breeds=true&order=RANDOM&limit=1`)
+            const qry =  await fetch(`https://api.thedogapi.com/v1/images/search?api_key=${api_key}&size=thumb&has_breeds=true&order=RANDOM&limit=1`)
             const data = await qry.json() 
             this.firstName = data[0].breeds[0].name,
             this.breedFor = data[0].breeds[0].bred_for,
