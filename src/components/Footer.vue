@@ -1,6 +1,6 @@
 <template>
     <div class="footer" type="dark">
-        <span>MBentoo</span>
+        <span>Mark Bryan Ladia</span>
     </div>
 </template>
 

@@ -31,11 +31,11 @@ export default {
         async getRandCat(){
             const api_key = process.env.VUE_APP_RAND_CAT_BREED;
 
-            const qry = await fetch(`https://api.thecatapi.com/v1/images/search?key=${api_key}&order=rand&limit=1&has_breeds=true&size=small`);
+            const qry = await fetch(`https://api.thecatapi.com/v1/images/search?api_key=${api_key}&order=rand&limit=1&has_breeds=true&size=small`);
             const dataJson = await qry.json();
             const data = dataJson[0].breeds[0];
-            // console.log(dataJson[0].url);
-            // console.log(data);
+            console.log(dataJson[0].url);
+             console.log(dataJson);
 
             this.name = data.name
             this.temperament = data.temperament
